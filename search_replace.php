@@ -202,7 +202,8 @@ function detectPkOrUnique(PDO $pdo, $table) {
     }
 
     // Unique
-    $stmt2 = $pdo->query("SHOW INDEX FROM `$table` WHERE Non_unique = 0 ORDER BY Seq_in_index");
+//    $stmt2 = $pdo->query("SHOW INDEX FROM `$table` WHERE Non_unique = 0 ORDER BY Seq_in_index");
+    $stmt2 = $pdo->query("SHOW INDEX FROM `$table` WHERE Non_unique = 0");
     $uCols = [];
     $foundName = null;
     while ($r2 = $stmt2->fetch(PDO::FETCH_ASSOC)) {
