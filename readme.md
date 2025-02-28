@@ -1,0 +1,1 @@
+`php search_replace.php --host="localhost" --db="espider_aventures" --user="root" --pass="root" --search="http://localhost/espider-aventures" --replace="https://e-spideraventures.com"`
